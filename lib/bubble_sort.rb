@@ -17,21 +17,4 @@ class BubbleSort
      end
      array
   end
-
-=begin
-  def bubble_sort ar
-    return ar unless ar.size <= 1
-
-    ar.each_with_index do |a, i|
-      if i <= a.size-2
-        if a[i] > a[i+1]
-          swap(a,a[i],a[i+1])
-          i += 1
-        end
-      end
-    end
-    return ar
-  end
-=end
-
 end
