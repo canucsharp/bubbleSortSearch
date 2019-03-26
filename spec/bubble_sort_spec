@@ -13,30 +13,22 @@ end
 
 RSpec.describe BubbleSort, "#bubble_sort" do
   context "Order an array" do
-    it "can it order an array" do
+    it "can order an array with mutiple of the same number" do
       ar = BubbleSort.new
       ord_ar = ar.bubble_sort([10, 2, 11, 0, 3, 2, 2])
       expect(ord_ar).to eq [0, 2, 2, 2, 3, 10, 11]
     end
-  end
-end
 
-RSpec.describe BubbleSort, "#bubble_sort" do
-  context "Order an array" do
-    it "can it order an array" do
+    it "can notice if an array is already ordered" do
       ar = BubbleSort.new
       ord_ar = ar.bubble_sort([1, 2, 3, 4, 5, 6])
       expect(ord_ar).to eq [1, 2, 3, 4, 5, 6]
     end
-  end
-end
 
-RSpec.describe BubbleSort, "#bubble_sort" do
-  context "Order an array" do
-    it "can it order an array" do
+    it "can it order an array with multiple of the same number and zero" do
       ar = BubbleSort.new
-      ord_ar = ar.bubble_sort([5, 1, 0, 49, 22, 1])
-      expect(ord_ar).to eq [0, 1, 1, 5, 22, 49]
+      ord_ar = ar.bubble_sort([5, 1, 0, 49, 22, 1, 22, 22, 49])
+      expect(ord_ar).to eq [0, 1, 1, 5, 22, 22, 22, 49, 49]
     end
   end
 end
